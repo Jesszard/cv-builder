@@ -5,6 +5,7 @@ import "./App.css";
 import GeneralInfo from "./components/GeneralInfo";
 import PreviewInfo from "./components/PreviewInfo";
 import EducationExp from "./components/EducationExperience";
+import Experience from "./components/PracticalExperience";
 function App() {
   const [form, setForm] = useState({
     firstName: "",
@@ -13,7 +14,12 @@ function App() {
     phoneNumber: "",
     schoolName: "",
     titleOfStudy: "",
-    date: "",
+    dateofStudy: "",
+    companyName: "",
+    position: "",
+    responsibilities: "",
+    startDate: "",
+    endDate: "",
   });
 
   return (
@@ -21,7 +27,7 @@ function App() {
       <h1>CV Builder</h1>
       <GeneralInfo form={form} setForm={setForm} />
       <EducationExp form={form} setForm={setForm} />
-
+      <Experience form={form} setForm={setForm} />
       <PreviewInfo form={form} />
     </div>
   );

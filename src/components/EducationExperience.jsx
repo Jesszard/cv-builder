@@ -9,7 +9,7 @@ export default function EducationExp(props) {
   };
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <h2>Educational Experience </h2>
         <input
           name="schoolName"

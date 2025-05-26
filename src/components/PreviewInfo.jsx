@@ -13,6 +13,12 @@ export default function PreviewInfo(props) {
       <p>{props.form.schoolName}</p>
       <p>{props.form.titleOfStudy}</p>
       <p>{props.form.dateofStudy}</p>
+      <h3>Experience</h3>
+      <p>{props.form.companyName}</p>
+      <p>{props.form.position}</p>
+      <p>{props.form.responsibilities}</p>
+      <p>{props.form.startDate}</p>
+      <p>{props.form.endDate}</p>
     </div>
   );
 }
