@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "../styles/EducationExperience.module.css";
 export default function EducationExp(props) {
   const handleChange = (e) => {
     props.setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -8,28 +8,37 @@ export default function EducationExp(props) {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className={styles.box}>
       <form onSubmit={handleSubmit}>
-        <h2>Educational Experience </h2>
+        <h2>Education</h2>
+        <label for="schoolName">School's Name</label>
         <input
           name="schoolName"
+          id="schoolName"
           value={props.form.schoolName}
           placeholder="School Name"
           type="text"
           onChange={handleChange}
         />
-
+        <label for="titleOfStudy">Field of Study</label>
         <input
           name="titleOfStudy"
+          id="titleOfStudy"
           value={props.form.titleOfStudy}
           placeholder="Title of Study"
           type="text"
           onChange={handleChange}
         />
+        <lable for="educationStartDate">Start Date</lable>
         <input
-          name="dateofStudy"
-          value={props.form.dateofStudy}
-          placeholder="Date"
+          name="educationStartDate"
+          value={props.form.educationStartDate}
+          type="date"
+          onChange={handleChange}
+        />
+        <input
+          name="educationEndDate"
+          value={props.form.educationEndDate}
           type="date"
           onChange={handleChange}
         />

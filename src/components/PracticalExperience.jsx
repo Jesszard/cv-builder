@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/PracticalExperience.module.css";
 
 export default function Experience(props) {
   const handleChange = (e) => {
@@ -8,7 +9,7 @@ export default function Experience(props) {
     e.preventDefault();
   };
   return (
-    <div>
+    <div className={styles.box}>
       <h2>Experience</h2>
       <form onSubmit={handleSubmit}>
         <input
@@ -26,7 +27,7 @@ export default function Experience(props) {
           type="text"
           onChange={handleChange}
         />
-        <input
+        <textarea
           name="responsibilities"
           value={props.form.responsibilities}
           placeholder="responsibilities"
@@ -34,15 +35,15 @@ export default function Experience(props) {
           onChange={handleChange}
         />
         <input
-          name="startDate"
-          value={props.form.startDate}
+          name="educationStartDate"
+          value={props.form.educationStartDate}
           placeholder="Start Date"
           type="date"
           onChange={handleChange}
         />
         <input
-          name="endDate"
-          value={props.form.endDate}
+          name="educationEndDate"
+          value={props.form.educationEndDate}
           placeholder="End Date"
           type="date"
           onChange={handleChange}
