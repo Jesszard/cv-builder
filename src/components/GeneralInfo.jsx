@@ -6,12 +6,13 @@ export default function GeneralInfo(props) {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    props.setSubmitted((prev) => ({ ...prev, generalInfo: true }));
   };
   return (
     <div className={styles.box}>
       <h2>General Information</h2>
       <form onSubmit={handleSubmit} className={styles.inputs}>
-        <label for="firstName">First Name</label>
+        <label htmlFor="firstName">First Name</label>
         <input
           name="firstName"
           id="firstName"
@@ -19,8 +20,9 @@ export default function GeneralInfo(props) {
           placeholder="First Name"
           type="text"
           onChange={handleChange}
+          required
         />
-        <label for="lastName">Last Name</label>
+        <label htmlFor="lastName">Last Name</label>
         <input
           name="lastName"
           id="lastName"
@@ -28,8 +30,9 @@ export default function GeneralInfo(props) {
           placeholder="Last Name"
           type="text"
           onChange={handleChange}
+          required
         />
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input
           name="email"
           id="email"
@@ -37,8 +40,9 @@ export default function GeneralInfo(props) {
           placeholder="Email"
           type="email"
           onChange={handleChange}
+          required
         />
-        <label for="phoneNumber">Phone Number</label>
+        <label htmlFor="phoneNumber">Phone Number</label>
         <input
           name="phoneNumber"
           id="phoneNumber"
@@ -46,6 +50,7 @@ export default function GeneralInfo(props) {
           placeholder="Phone Number"
           type="tel"
           onChange={handleChange}
+          required
         />
 
         <button type="submit">Submit</button>

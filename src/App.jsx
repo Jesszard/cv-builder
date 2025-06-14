@@ -23,14 +23,18 @@ function App() {
     startDate: "",
     endDate: "",
   });
-
+  const [submitted, setSubmitted] = useState({
+    generalInfo: false,
+    education: false,
+    experience: false,
+  });
   return (
     <div className={styles.container}>
       <h1>CV Builder</h1>
-      <GeneralInfo form={form} setForm={setForm} />
-      <EducationExp form={form} setForm={setForm} />
-      <Experience form={form} setForm={setForm} />
-      <PreviewInfo form={form} />
+      <GeneralInfo form={form} setForm={setForm} setSubmitted={setSubmitted} />
+      <EducationExp form={form} setForm={setForm} setSubmitted={setSubmitted} />
+      <Experience form={form} setForm={setForm} setSubmitted={setSubmitted} />
+      <PreviewInfo form={form} submitted={submitted} />
     </div>
   );
 }

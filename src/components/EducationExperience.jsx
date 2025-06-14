@@ -11,7 +11,7 @@ export default function EducationExp(props) {
     <div className={styles.box}>
       <form onSubmit={handleSubmit}>
         <h2>Education</h2>
-        <label for="schoolName">School's Name</label>
+        <label htmlFor="schoolName">School's Name</label>
         <input
           name="schoolName"
           id="schoolName"
@@ -20,7 +20,7 @@ export default function EducationExp(props) {
           type="text"
           onChange={handleChange}
         />
-        <label for="titleOfStudy">Field of Study</label>
+        <label htmlFor="titleOfStudy">Field of Study</label>
         <input
           name="titleOfStudy"
           id="titleOfStudy"
@@ -29,7 +29,7 @@ export default function EducationExp(props) {
           type="text"
           onChange={handleChange}
         />
-        <lable for="educationStartDate">Start Date</lable>
+        <label htmlFor="educationStartDate">Start Date</label>
         <input
           name="educationStartDate"
           value={props.form.educationStartDate}
